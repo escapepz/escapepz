@@ -1,0 +1,25 @@
+magick output_400x80_3.png ^
+ -fill none -stroke "#FFD400" -strokewidth 1 ^
+ -draw "roundrectangle 0,0 399,79 6,6" ^
+ output_400x80_border_2.png
+
+magick preview512x512.png ^
+ -background "#1E1E1E" ^
+ -gravity center ^
+ -extent 683x512 ^
+ poster_4x3.png
+
+magick Capture.PNG ^
+ -gravity center -crop x100+0+0 ^
+ -gravity west   -crop 600x100+40+0 ^
+ +repage output_600x100.png
+
+magick Capture.png -gravity center -crop 600x100-20+0 +repage output_600x100.png
+
+magick Capture.PNG -crop 483x100+202+185 +repage output_483x100_4.83.png
+
+magick output_483x100_4.83.png ^
+ -fill none -stroke "#FFD400" -strokewidth 1 ^
+ -draw "roundrectangle 1,1 481,98 6,6" ^
+ output_483x100_4.83_border_2.png
+
