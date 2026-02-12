@@ -23,3 +23,7 @@ magick output_483x100_4.83.png ^
  -draw "roundrectangle 1,1 481,98 6,6" ^
  output_483x100_4.83_border_2.png
 
+magick kofi_382x79.png ^
+ -fill none -stroke "#FFD400" -strokewidth 1 ^
+ -draw "roundrectangle 1,1 381,78 6,6" ^
+ kofi_382x79_border_2.png
